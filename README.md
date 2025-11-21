@@ -1,4 +1,8 @@
-<div align="center">
+<p align="center">
+  <img src="public/logo.svg" alt="Email Logo" width="120" height="120">
+</p> 
+
+
 # 📧 Visual Email Builder
 
 ### **Professional Email Composition Platform with Real-Time Preview**
