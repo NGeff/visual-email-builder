@@ -1,39 +1,4 @@
 <div align="center">
-
-```svg
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Circle -->
-  <circle cx="100" cy="100" r="95" fill="#6366f1" opacity="0.1"/>
-  
-  <!-- Envelope Base -->
-  <rect x="40" y="70" width="120" height="80" rx="8" fill="#6366f1"/>
-  
-  <!-- Envelope Flap Back -->
-  <path d="M 40 70 L 100 110 L 160 70" fill="#818cf8"/>
-  
-  <!-- Envelope Lines (Content) -->
-  <line x1="60" y1="95" x2="140" y2="95" stroke="white" stroke-width="3" opacity="0.6"/>
-  <line x1="60" y1="110" x2="120" y2="110" stroke="white" stroke-width="3" opacity="0.6"/>
-  <line x1="60" y1="125" x2="140" y2="125" stroke="white" stroke-width="3" opacity="0.6"/>
-  
-  <!-- Envelope Flap Front -->
-  <path d="M 40 70 L 100 110 L 160 70 L 160 72 L 100 112 L 40 72 Z" fill="#4f46e5"/>
-  
-  <!-- Edit Icon -->
-  <g transform="translate(130, 130)">
-    <circle cx="20" cy="20" r="18" fill="white"/>
-    <path d="M 12 28 L 12 24 L 24 12 L 28 16 L 16 28 Z" fill="#6366f1"/>
-    <path d="M 24 12 L 28 16 L 26 18 L 22 14 Z" fill="#818cf8"/>
-  </g>
-  
-  <!-- Sparkles -->
-  <circle cx="30" cy="50" r="3" fill="#fbbf24" opacity="0.8"/>
-  <circle cx="170" cy="140" r="3" fill="#fbbf24" opacity="0.8"/>
-  <path d="M 25 30 L 26 33 L 29 34 L 26 35 L 25 38 L 24 35 L 21 34 L 24 33 Z" fill="#fbbf24" opacity="0.6"/>
-  <path d="M 175 50 L 176 53 L 179 54 L 176 55 L 175 58 L 174 55 L 171 54 L 174 53 Z" fill="#fbbf24" opacity="0.6"/>
-</svg>
-```
-
 # 📧 Visual Email Builder
 
 ### **Professional Email Composition Platform with Real-Time Preview**
