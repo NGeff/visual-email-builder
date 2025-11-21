@@ -1,0 +1,48 @@
+{
+  "name": "visual-email-builder",
+  "version": "1.0.0",
+  "description": "A modern, feature-rich email composition platform with real-time preview and professional templates",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "email",
+    "builder",
+    "editor",
+    "visual",
+    "drag-and-drop",
+    "smtp",
+    "nodemailer",
+    "html-email"
+  ],
+  "author": "NGeff",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "nodemailer": "^6.9.8",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngeff/visual-email-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ngeff/visual-email-builder/issues"
+  },
+  "homepage": "https://github.com/ngeff/visual-email-builder#readme"
+}
