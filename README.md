@@ -1,384 +1,134 @@
-<p align="center">
-  <img src="public/logo.svg" alt="Email Logo" width="120" height="120">
-</p> 
+# Visual Email Builder
 
+A professional email composition platform with a drag-and-drop interface, real-time preview, and import/export capabilities.
 
-# 📧 Visual Email Builder
+[![Node.js](https://img.shields.io/badge/Node.js->=14.0.0-brightgreen.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-### **Professional Email Composition Platform with Real-Time Preview**
+## Description
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Node Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GitHub Stars](https://img.shields.io/github/stars/ngeff/visual-email-builder?style=social)](https://github.com/ngeff/visual-email-builder)
+Visual Email Builder lets you create HTML emails without coding. Start with professional templates, edit components with a live property panel, and export clean, compatible HTML for any email client. Includes optional SMTP integration for direct sending.
 
-**Create stunning HTML emails with a drag-and-drop interface, professional templates, and powerful import/export capabilities.**
+## Features
 
-[Demo](#-demo) • [Features](#-features) • [Quick Start](#-quick-start) • [Documentation](#-documentation) • [Contributing](#-contributing)
+### Visual Editor
 
-</div>
+- 8+ component types: text, headings, images, buttons, dividers, spacers, columns, social links
+- Drag-and-drop reordering with mouse and touch support
+- Live property panel for real-time editing of colors, sizes, and alignment
+- Undo/redo system (50-step history) with keyboard shortcuts
+- Dark mode
 
----
+### Import/Export
 
-## 🎯 **Why Visual Email Builder?**
+**Import from HTML**
+- 30+ element types recognized automatically
+- Bootstrap, Tailwind CSS, and email template support
+- Smart detection of buttons, images, text, and layouts
+- Style extraction (colors, fonts, spacing)
+- Upload file or paste HTML
 
-Building professional HTML emails is **hard**. Tables, inline styles, email client compatibility - it's a nightmare. Visual Email Builder makes it **simple**.
+**Export**
+- Clean, production-ready HTML
+- Drafts saved to LocalStorage
+- Copy/paste for quick sharing
 
-✨ **Drag & Drop** - No coding required  
-🎨 **Professional Templates** - Start with proven designs  
-📱 **Responsive Preview** - See desktop and mobile views  
-⚡ **Smart Import** - Load any HTML email and edit it  
-🚀 **Export Anywhere** - Download clean, compatible HTML  
-📧 **Direct Sending** - SMTP integration built-in  
+### Templates
 
----
+- Welcome emails
+- Newsletters
+- Promotional emails
+- Transactional emails (receipts, confirmations)
+- Blank canvas
 
-## ✨ **Features**
+## Requirements
 
-### 🎨 **Visual Editor**
-- **8+ Component Types** - Text, Headings, Images, Buttons, Dividers, Spacers, Columns, Social Links
-- **Drag & Drop Reordering** - Touch and mouse support
-- **Live Property Panel** - Edit colors, sizes, alignment in real-time
-- **Undo/Redo System** - 50-step history with keyboard shortcuts
-- **Dark Mode** - Comfortable editing in any lighting
+- Node.js >= 14
+- npm >= 6
 
-### 📥 **Powerful Import/Export**
+## Installation
 
-#### **Import from HTML** ⚡ *NEW & IMPROVED*
-- ✅ **30+ Element Types** recognized automatically
-- ✅ **Framework Support** - Bootstrap, Tailwind CSS, email templates
-- ✅ **Smart Detection** - Buttons, images, text, layouts
-- ✅ **Style Extraction** - Colors, fonts, spacing preserved
-- ✅ **Two Methods** - Upload file or paste HTML
-
-#### **Export Options**
-- 📄 **Clean HTML** - Production-ready email code
-- 💾 **Save Drafts** - LocalStorage persistence
-- 📋 **Copy/Paste** - Quick sharing
-
-### 🎭 **Professional Templates**
-- **Welcome Emails** - Onboard new users
-- **Newsletters** - Share updates and news
-- **Promotional** - Announce sales and offers
-- **Transactional** - Receipts and confirmations
-- **Blank Canvas** - Start from scratch
-
-### 🛠️ **Developer Experience**
-- **Modular Architecture** - Clean, maintainable code
-- **No Dependencies** - Pure JavaScript, works offline
-- **Security First** - XSS protection, input sanitization
-- **Rate Limiting** - Production-ready API
-- **Comprehensive Docs** - Every feature explained
-
----
-
-## 🚀 **Quick Start**
-
-### **Option 1: Standalone (No Server)**
-
-Perfect for local use or static hosting.
+Standalone (no server, works offline):
 
 ```bash
-# Clone the repository
-git clone https://github.com/ngeff/visual-email-builder.git
+git clone https://github.com/NGeff/visual-email-builder.git
 cd visual-email-builder
-
-# Open in browser
 open public/index.html
-# Or simply double-click index.html
 ```
 
-**That's it!** The editor works completely offline.
-
-### **Option 2: With Server (For Email Sending)**
-
-Includes SMTP integration for direct sending.
+With SMTP server:
 
 ```bash
-# Install dependencies
+git clone https://github.com/NGeff/visual-email-builder.git
+cd visual-email-builder
 npm install
-
-# Configure environment
 cp .env.example .env
-# Edit .env with your SMTP credentials
-
-# Start server
 npm start
 ```
 
-Open `http://localhost:3000`
-
----
-
-## 📖 **Documentation**
-
-### **Basic Usage**
-
-1. **Add Components** - Click buttons in the left sidebar
-2. **Customize** - Select any block to edit properties
-3. **Reorder** - Drag and drop blocks to rearrange
-4. **Preview** - See real-time updates on the right
-5. **Export or Send** - Download HTML or send directly
-
-### **Keyboard Shortcuts**
-
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl/Cmd + Z` | Undo |
-| `Ctrl/Cmd + Y` | Redo |
-| `Ctrl/Cmd + S` | Save Draft |
-| `Ctrl/Cmd + E` | Export HTML |
-| `Delete` | Remove Selected Block |
-
-### **Import HTML**
-
-The import feature recognizes:
-
-**Elements:** `<p>`, `<h1-h6>`, `<img>`, `<a>`, `<button>`, `<div>`, `<span>`, `<table>`, `<ul>`, `<ol>`, `<hr>`, `<blockquote>`, `<strong>`, `<em>`, and more
-
-**Frameworks:** Bootstrap classes (`.btn`, `.btn-primary`), Tailwind utilities (`.bg-blue`, `.rounded`)
-
-**Styles:** Inline styles, computed styles, colors (RGB/HEX), fonts, spacing, borders
-
-**Structures:** Email tables, multi-column layouts, social media links
-
-### **SMTP Configuration**
-
-Supports any SMTP provider:
+Edit `.env`:
 
 ```env
-# Brevo (Sendinblue)
+PORT=3000
+NODE_ENV=development
+
 SMTP_HOST=smtp-relay.brevo.com
 SMTP_PORT=587
+SMTP_USER=YOUR_SMTP_USER
+SMTP_PASS=YOUR_SMTP_PASSWORD
 
-# Gmail
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
+SENDER_EMAIL=your_email@example.com
+SENDER_NAME=Your Name
 
-# SendGrid
-SMTP_HOST=smtp.sendgrid.net
-SMTP_PORT=587
+ALLOWED_ORIGINS=http://localhost:3000
+
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
 ```
 
----
+The editor runs at `http://localhost:3000`.
 
-## 🏗️ **Project Structure**
+## Usage
+
+1. Select a template or start from a blank canvas.
+2. Drag components from the sidebar into the editor.
+3. Select a component to edit its properties in the live panel.
+4. Use Undo/redo (`Ctrl/Cmd + Z`, `Ctrl/Cmd + Y`) as needed.
+5. Export HTML or save a draft.
+
+## Project Structure
 
 ```
 visual-email-builder/
+├── .env.example
+├── package.json
 ├── public/
+│   ├── index.html
 │   ├── css/
-│   │   └── styles.css           # Complete design system
-│   ├── js/
-│   │   ├── editor.js            # Main editor logic
-│   │   ├── components.js        # Block components
-│   │   ├── templates.js         # Template library
-│   │   └── utils.js             # Utility functions
-│   └── index.html               # Main interface
+│   │   └── styles.css
+│   └── js/
+│       ├── editor.js
+│       ├── components.js
+│       ├── templates.js
+│       └── utils.js
 ├── server/
-│   ├── config/
-│   │   └── email.config.js      # SMTP configuration
-│   ├── controllers/
-│   │   └── email.controller.js  # Email logic
-│   ├── routes/
-│   │   └── email.routes.js      # API routes
-│   ├── utils/
-│   │   └── validators.js        # Input validation
-│   └── server.js                # Express server
-├── .env.example                 # Environment template
-├── .gitignore
+│   └── server.js
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
-├── LICENSE
-├── package.json
-├── README.md
 ├── SECURITY.md
-└── TESTING.md
+└── README.md
 ```
 
----
+## Security
 
-## 🎨 **Components**
+- XSS prevention through HTML sanitization
+- CSRF protection with secure headers
+- Rate limiting on API endpoints
+- Input validation for email and data
+- CORS configuration for controlled access
 
-### Available Blocks
+Store SMTP credentials in environment variables and rotate them regularly.
 
-| Component | Description | Properties |
-|-----------|-------------|------------|
-| **Text** | Paragraphs and body text | Font size, color, alignment, weight |
-| **Heading** | H1-H6 headers | Level, size, color, alignment |
-| **Image** | Pictures and graphics | URL, alt text, width, alignment, link |
-| **Button** | Call-to-action buttons | Text, URL, colors, radius, alignment |
-| **Divider** | Horizontal lines | Color, thickness, width, style |
-| **Spacer** | Vertical spacing | Height |
-| **Columns** | Multi-column layout | Gap, content for each column |
-| **Social** | Social media icons | Platforms, icon size, spacing |
+## License
 
----
-
-## 🔒 **Security**
-
-### Built-in Protection
-- ✅ **XSS Prevention** - HTML sanitization
-- ✅ **CSRF Protection** - Secure headers
-- ✅ **Rate Limiting** - API throttling
-- ✅ **Input Validation** - Email and data validation
-- ✅ **CORS Configuration** - Controlled access
-
-### Best Practices
-- Store SMTP credentials in environment variables
-- Use app-specific passwords for email services
-- Enable 2FA on email accounts
-- Rotate credentials regularly
-- Monitor for unusual activity
-
-See [SECURITY.md](SECURITY.md) for details.
-
----
-
-## 🤝 **Contributing**
-
-We love contributions! Here's how you can help:
-
-### Quick Contribution
-
-1. Fork the repository
-2. Create a feature branch
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. Make your changes
-4. Commit with clear messages
-   ```bash
-   git commit -m 'Add amazing feature'
-   ```
-5. Push to your fork
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-6. Open a Pull Request
-
-### Development Setup
-
-```bash
-# Clone your fork
-git clone https://github.com/ngeff/visual-email-builder.git
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
----
-
-## 📊 **Browser Support**
-
-| Browser | Version | Status |
-|---------|---------|--------|
-| Chrome | 90+ | ✅ Fully Supported |
-| Firefox | 88+ | ✅ Fully Supported |
-| Safari | 14+ | ✅ Fully Supported |
-| Edge | 90+ | ✅ Fully Supported |
-| iOS Safari | 14+ | ✅ Fully Supported |
-| Chrome Mobile | 90+ | ✅ Fully Supported |
-
----
-
-## 📜 **License**
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-### What This Means
-
-✅ Commercial use  
-✅ Modification  
-✅ Distribution  
-✅ Private use  
-
-📋 License and copyright notice required
-
----
-
-## 🎯 **Roadmap**
-
-### Coming Soon
-- [ ] **Multi-language Support** - i18n integration
-- [ ] **Email Analytics** - Open and click tracking
-- [ ] **A/B Testing** - Test variations
-- [ ] **Collaborative Editing** - Real-time collaboration
-- [ ] **Cloud Storage** - Save to cloud
-- [ ] **Advanced Scheduling** - Scheduled sends
-- [ ] **Contact Management** - Mailing lists
-- [ ] **More Templates** - Expanded library
-- [ ] **Custom Fonts** - Web font support
-- [ ] **Advanced Layouts** - Complex structures
-
----
-
-## 💬 **Community & Support**
-
-### Get Help
-- 📖 [Documentation](https://github.com/ngeff/visual-email-builder/wiki)
-- 🐛 [Report Issues](https://github.com/ngeff/visual-email-builder/issues)
-- 💡 [Feature Requests](https://github.com/ngeff/visual-email-builder/issues/new)
-- 💬 [Discussions](https://github.com/ngeff/visual-email-builder/discussions)
-
-### Stay Updated
-- ⭐ Star this repository
-- 👀 Watch for updates
-- 🔔 Enable notifications
-
----
-
-## 🏆 **Acknowledgments**
-
-### Built With
-- [Express.js](https://expressjs.com/) - Fast, minimalist web framework
-- [Nodemailer](https://nodemailer.com/) - Email sending for Node.js
-- [Helmet.js](https://helmetjs.github.io/) - Security middleware
-- Pure JavaScript - No heavy frameworks
-
-### Special Thanks
-- All contributors who helped improve this project
-- The open-source community for inspiration
-- Email marketing professionals for feedback
-
----
-
-## 📈 **Stats**
-
-<div align="center">
-
-![GitHub Stars](https://img.shields.io/github/stars/ngeff/visual-email-builder?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/ngeff/visual-email-builder?style=social)
-![GitHub Issues](https://img.shields.io/github/issues/ngeff/visual-email-builder)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/ngeff/visual-email-builder)
-![Last Commit](https://img.shields.io/github/last-commit/ngeff/visual-email-builder)
-
-</div>
-
----
-
-## 🌟 **Show Your Support**
-
-If this project helped you, please consider:
-
-- ⭐ **Star this repository**
-- 🐛 **Report bugs** you find
-- 💡 **Suggest features** you need
-- 📖 **Improve documentation**
-- 🔀 **Submit pull requests**
-- 📢 **Share with others**
-
----
-
-<div align="center">
-
-**[⬆ Back to Top](#-visual-email-builder)**
-
-Made with ❤️ by [NGeff](https://github.com/ngeff) and [contributors](https://github.com/ngeff/visual-email-builder/graphs/contributors)
-
-</div>
+MIT © NGeff
